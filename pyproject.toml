@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "iocx-registry-keys"
-version = "0.1.0"
-description = "Registry key, value, and persistence detector plugin for iocx."
-readme = "README.md"
+version = "1.0.0"
+description = "High-performance iocx plugin for detecting Windows Registry keys, values, and persistence locations."
+readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
@@ -17,15 +17,33 @@ dependencies = [
     "iocx>=0.4.0"
 ]
 
-keywords = ["ioc", "iocx", "registry", "windows", "dfir", "plugin"]
+keywords = [
+    "iocx",
+    "iocx-plugin",
+    "registry",
+    "windows-registry",
+    "registry-keys",
+    "registry-values",
+    "registry-persistence",
+    "autorun",
+    "persistence",
+    "malware-analysis",
+    "dfir",
+    "ioc-extraction",
+    "security",
+]
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Monitoring",
 ]
 
 [project.urls]
-Homepage = "https://github.com/iocx-dev/iocx-registry-keys"
+Homepage = "https://iocx.dev"
 Repository = "https://github.com/iocx-dev/iocx-registry-keys"
 
 [project.entry-points."iocx.plugins"]
