@@ -7,7 +7,7 @@ name = "iocx-registry-keys"
 version = "0.1.0"
 description = "Registry key, value, and persistence detector plugin for iocx"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
     { name = "MalX Labs" }
