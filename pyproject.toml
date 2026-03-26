@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iocx-registry-keys"
+version = "0.1.0"
+description = "Registry key, value, and persistence detector plugin for iocx"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "MalX Labs" }
+]
+
+dependencies = [
+    "iocx>=0.4.0"
+]
+
+keywords = ["ioc", "iocx", "registry", "windows", "dfir", "plugin"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/iocx-dev/iocx-registry-keys"
+Repository = "https://github.com/iocx-dev/iocx-registry-keys"
+
+[project.entry-points."iocx.plugins"]
+registry-keys = "iocx_registry_keys.plugin:Plugin"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
