@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/iocx-verified%20plugin-4B8BF5?style=for-the-badge&logo=shield" alt="iocx verified plugin" />
+  <img src="https://github.com/iocx-dev/iocx-registry-keys/actions/workflows/ci.yml/badge.svg" alt="Tests" />
+  <img src="https://img.shields.io/badge/Coverage-99%25-brightgreen" alt="Coverage." />
+  <img src="https://img.shields.io/badge/Security-Bandit%20%2F%20pip--audit-brightgreen?style=flat-square" alt="Security" />
+</p>
+
 # iocx-registry-keys
 
 A high‑performance registry key detector plugin for the `iocx` engine.
