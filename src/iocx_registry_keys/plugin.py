@@ -43,10 +43,12 @@ class Plugin(IOCXPlugin):
     )
 
     def detect(self, text: str, ctx: PluginContext):
-        results = []
+        keys = []
+        values = []
+        persistence = []
 
         for match in PERSISTENCE_REGEX.finditer(text):
-            results.append(
+            persistence.append(
                 Detection(
                     value=match.group(0),
                     start=match.start(),
@@ -56,7 +58,7 @@ class Plugin(IOCXPlugin):
             )
 
         for match in REG_VALUE_REGEX.finditer(text):
-            results.append(
+            values.append(
                 Detection(
                     value=match.group(0),
                     start=match.start(),
@@ -66,7 +68,7 @@ class Plugin(IOCXPlugin):
             )
 
         for match in REGISTRY_REGEX.finditer(text):
-            results.append(
+            keys.append(
                 Detection(
                     value=match.group(0),
                     start=match.start(),
@@ -75,4 +77,8 @@ class Plugin(IOCXPlugin):
                 )
             )
 
-        return results
+        return {
+            "registry.keys": keys,
+            "registry.values": values,
+            "registry.persistence": persistence,
+        }
