@@ -14,7 +14,7 @@ authors = [
 ]
 
 dependencies = [
-    "iocx" #"iocx>=0.4.0"
+    "iocx>=0.4.0"
 ]
 
 keywords = [
