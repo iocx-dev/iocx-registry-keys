@@ -46,11 +46,14 @@ class Plugin(IOCXPlugin):
         keys = []
         values = []
         persistence = []
+        persistence_hits = set()
 
         for match in PERSISTENCE_REGEX.finditer(text):
+            val = match.group(0)
+            persistence_hits.add(val)
             persistence.append(
                 Detection(
-                    value=match.group(0),
+                    value=val,
                     start=match.start(),
                     end=match.end(),
                     category="registry.persistence",
@@ -68,9 +71,12 @@ class Plugin(IOCXPlugin):
             )
 
         for match in REGISTRY_REGEX.finditer(text):
+            val = match.group(0)
+            if val in persistence_hits:
+                continue
             keys.append(
                 Detection(
-                    value=match.group(0),
+                    value=val,
                     start=match.start(),
                     end=match.end(),
                     category="registry.keys",
