@@ -168,6 +168,7 @@ pytest -q
 Contributions are welcome.
 
 If you want to propose changes to detection behavior (e.g., adding new persistence keys), please open a PR. Priority decisions are centrally managed by the IOCX engine, so contributors can propose category priority changes through the normal review process.
-License
+
+## License
 
 MIT License. See LICENSE for details
